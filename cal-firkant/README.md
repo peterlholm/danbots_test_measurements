@@ -1,0 +1,1 @@
+# Samling af måleopstillinger
