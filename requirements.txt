@@ -1,0 +1,5 @@
+#
+# find rectangle
+#
+opencv-python
+numpy
