@@ -34,16 +34,17 @@ def gen_sharpness_picture(img):
             print("sha", iarr.shape)
             print(iarr)
             cv.imshow("uu"+str(nn), iarr )
-            cv.waitKey(3000)
+            cv.waitKey(13000)
             nn += 1
     return False
 
 if __name__ =='__main__':  
     picture1 = Path(__file__).parent / 'TestImages/piZ2_210907/1/color.jpg'
     picture2 = Path(__file__).parent / 'TestImages/piZ2_210907/2/color.jpg'
-    im1 = cv.imread(picture1)
-    #calc_sharpnes(im1)
-    im2 = cv.imread(picture2)
-    #calc_sharpnes(im2)
+    print(picture1)
+    im1 = cv.imread(str(picture1))
+    calc_sharpnes(im1)
+    im2 = cv.imread(str(picture2))
+    calc_sharpnes(im2)
     res = gen_sharpness_picture(im2)
     #cv.imshow("res", res)
