@@ -20,3 +20,5 @@ udbredelsen er horizontal 31 grader og vertical 23 grader
 projektor centrum er 0,9 cm fra forkant
 
 periodeafstand er 1,2 grad
+
+Antal perioder på dias: ca 17
