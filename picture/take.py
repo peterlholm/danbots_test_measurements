@@ -19,8 +19,8 @@ def take_picture(url, filepath, zoom=None):
         with open(local_filename, 'wb') as fd:
             fd.write(resp.content)
         return True
-    else:
-        print("Error", resp)
+    print("Error", resp)
+    return False
 
 def take_serie(path, number=10, zoom=None):
     "take a serie of pictures to folder"
