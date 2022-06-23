@@ -19,6 +19,12 @@ udbredelsen er horizontal 31 grader og vertical 23 grader
 
 projektor centrum er 0,9 cm fra forkant
 
-periodeafstand er 1,2 grad
+periodeafstand er 1,23 grad
 
-Antal perioder på dias: ca 17
+Antal perioder på dias: ca 17  - aktiv område 20,9 grad
+
+# film
+typisk 2400 (- 4000) dpi
+
+# dias
+4 x 4 mm  20,9 grader =>  afstand: 10.8 mm
