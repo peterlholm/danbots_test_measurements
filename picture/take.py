@@ -3,8 +3,8 @@ from pathlib import Path
 import requests
 
 
-WAND="10.11.131.232"
-URL="http://"+WAND+":8080/pic/still?flash=1"
+WAND="10.11.131.24"
+URL="http://"+WAND+":8080/pic/still?dias=1"
 
 def take_picture(url, filepath, zoom=None):
     "take a picture from wand"
