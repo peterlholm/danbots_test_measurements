@@ -22,28 +22,25 @@ def create_square(filename, size, dpi):
     center = pixel_size // 2
     start = center - cm1 // 2
     shape = [(start, start),(start + cm1, start + cm1)]
+    print("shape1", shape)
     start2 = center - cm1
     shape2 = [(start2, start2),(start2 + 2*cm1, start2 + 2*cm1)]
+    print("shape2", shape2)
     img = ImageDraw.Draw(grey)
-    img.rectangle(shape2, fill=255, outline=0, width=mm1//2)
-    img.rectangle(shape, fill=255, outline=0, width=mm1)
-    # for y in range(pixel_size):
-    #     #print(val, intens)
-    #     for x in range(pixel_size):
-    #         val = 128 
-    #         grey.putpixel((x, y), val)
-
+    img.rectangle(shape2, fill=255, outline=0, width=mm1//6)
+    img.rectangle(shape, fill=255, outline=0, width=mm1//4)
     metadata = PngInfo()
     metadata.add_text(
-        "Description", f"Freq ")
+        "Description", f"1 cm square {dpi} dpi")
     metadata.add_text("Author", "Peter Holm")
     exif = grey.getexif()
     exif[XPAUTHOR] = "Peter Holm"
-    exif[XPTITLE] = f"Freq (pic/period "
-    exif[IMAGEDESCRIPTION] = f"Freq (pic/period "
-    DPIXY = (dpi, dpi)
-
-    grey.save(filename,  dpi=DPIXY, pnginfo=metadata)
+    exif[XPTITLE] = f"1 cm square {dpi} dpi"
+    exif[IMAGEDESCRIPTION] = f"1 cm square {dpi} dpi"
+    dpixy = (dpi, dpi)
+    grey.save(filename,  dpi=dpixy, pnginfo=metadata)
     
-
-create_square("1cm.png", PICTURE_SIZE, 600)
+folder = Path(__file__).parent / "pic"
+create_square(folder / "1cm_600.png", PICTURE_SIZE, 600)
+create_square(folder / "1cm_1200.png", PICTURE_SIZE, 1200)
+create_square(folder / "1cm_2400.png", PICTURE_SIZE, 2400)
